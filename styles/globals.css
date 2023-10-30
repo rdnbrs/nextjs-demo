@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+  Note: The styles for this gradient grid background is heavily inspired by the creator of this amazing site (https://dub.sh) – all credits go to them! 
+*/
+html {
+    font-size: 14px;
+}
+
+body {
+    font-family: var(--font-family);
+    font-weight: normal;
+    background: var(--surface-ground);
+    color: var(--text-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.card {
+    background: var(--surface-card);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.exit {
+    position: fixed;
+    bottom: 0;
+}
+
+.sidebar {
+    position: fixed;
+    height: 100%;
+    width: 250px;
+    background-color: #f0f0f0;
+    border-radius: 0 8px 8px 0;
+    box-shadow: #a4a4a5 1.95px 1.95px 2.6px;
+
+    @media (max-width: 1000px) {
+        width: 40px;
+    }
+}
+
+.sidebarlogo {
+    height: 155px;
+    margin: 5px 5px 15px 5px;
+    background-color: #acacac;
+    border-radius: 8px;
+    color: black;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.sidebardiv {
+    margin-left: 2px;
+    margin-right: 2px;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+.sidebardiv_hover {
+    &:hover {
+        background-color: #df0000;
+        margin-top: 1px;
+        margin-bottom: 1px;
+    }
+}
+
+.menu-text {
+    display: block;
+
+    @media (max-width: 1000px) {
+        display: none;
+    }
+}
+
+.menu-icon {
+    display: none;
+
+    @media (max-width: 1000px) {
+        display: block;
+    }
+}
+
+.app {
+    margin-left: 250px;    
+
+    @media (max-width: 1000px) {
+        margin-left: 40px;
+    }
+}
+
+.content{
+    margin-left: 1vw;
+    padding-top: 3vh;
+    margin-right: 1vw;
+}
+
+.main {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #ebebeb;
+}
+
+.flex-center {
+    @apply flex justify-center items-center;
+}
+
+.flex-start {
+    @apply flex justify-start items-start;
+}
+
+.flex-end {
+    @apply flex justify-end items-center;
+}
+
+.flex-between {
+    @apply flex justify-between items-center;
+}
+
+.logo_text {
+    color: black;
+}
+
+.selected-menu {
+    background-color: #bb2727;
+    border-radius: 8px;
+}
+
+.custom-input{
+    border: solid 1px #afafaf;
+    height: 2rem;
+    margin: .5rem;
+}
